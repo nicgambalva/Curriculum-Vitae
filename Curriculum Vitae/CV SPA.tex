@@ -1,0 +1,159 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CV Profesional de Longitud Media
+% Plantilla LaTeX
+% Versión 2.0 (8/5/13)
+%
+% Esta plantilla ha sido descargada de:
+% http://www.LaTeXTemplates.com
+%
+% Autor original:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Nota importante:
+% Esta plantilla requiere que el archivo resume.cls esté en el mismo directorio que
+% el archivo .tex. El archivo resume.cls proporciona el estilo de currículum utilizado para estructurar el
+% documento.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume} % Utiliza el estilo personalizado resume.cls
+
+\usepackage[left=0.5in,top=0.2in,right=0.5in,bottom=0.5in]{geometry} % Márgenes del documento
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{fontawesome}
+\usepackage{relsize}
+
+\sloppy
+
+\newcommand{\tab}[1]{\hspace{.1\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+\name{Nicolás Gamboa Álvarez} % Tu nombre
+
+%
+%   INFORMACIÓN DE CONTACTO
+%
+
+\address{\faPhoneSquare \ +33 06 14 42 18 03} % Número de teléfono
+\address{París, Francia} % Dirección (no completa)
+\address{\href{mailto:nicolas.gamboaalvarez@edhec.com}{\faEnvelopeSquare \ nicolas.gamboaalvarez@edhec.com} \\ \href{https://www.linkedin.com/in/nicolasgamboaalvarez} {\faLinkedinSquare \ LinkedIn: nicolasgamboaalvarez}} % Correo electrónico y LinkedIn
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}
+
+%
+%   SECCIÓN DE EXPERIENCIA LABORAL
+%
+
+\begin{rSection}{EXPERIENCIA LABORAL}
+
+\vspace{0.3em}
+\begin{rSubsection}{TP ICAP}{Enero 2024 - Presente}{Becario de análisis financiero - Investigación de acciones / Big data}{París, Francia}
+    \item Implementé análisis de big data para investigación de acciones, para descubrir oportunidades de inversión y discrepancias de precios en una cartera de 243 acciones cotizadas en 18 bolsas de valores. Desarrollé modelos de pronóstico para tendencias micro y macro.
+    \item Realicé análisis sectoriales de índices MSCI y evalué el rendimiento financiero de empresas cotizadas. Establecí relaciones con clientes, monitoreé las tendencias del mercado y redacté resúmenes de información de mercado y nuestros hallazgos de investigación.
+\end{rSubsection}
+
+\begin{rSubsection}{PKF Arsilon}{Junio 2023 - Diciembre 2023}{Becario de valoración financiera}{París, Francia}
+    \item Desarrollé modelos de valoración en Excel, CapitalIQ Pro y VBA para diversos activos. Utilicé técnicas avanzadas como árboles trinomiales y simulaciones de Monte Carlo para valoraciones precisas. Me mantuve actualizado con las tendencias de la industria y los múltiplos.
+    \item Analicé datos financieros y planes de negocio para valorar empresas y diferentes tipos de activos financieros. Apliqué técnicas de valoración relevantes e investigué comparables para gestores de activos y directores financieros de empresas.
+\end{rSubsection}
+
+\begin{rSubsection}{EY - Consultoría Tecnológica}{Julio 2021 - Agosto 2022}{Becario de datos y análisis}{Bogotá, Colombia}
+    \item Desarrollé algoritmos para el análisis de datos en Python y R, incluyendo la simulación de rendimientos y escenarios de riesgo utilizando modelos estadísticos. Contribuí activamente al desarrollo y mejora de metodologías y herramientas de análisis de datos.
+    \item Creé informes y paneles basados en datos como entregables para clientes, lo que implicaba la recopilación, preparación y análisis de diferentes fuentes de datos en Power BI. Apoyé el diseño de bases de datos y modelos matemáticos.
+\end{rSubsection}
+\end{rSection}
+
+\vspace{0.5em}
+
+%
+%   SECCIÓN DE EDUCACIÓN
+%
+
+\begin{rSection}{EDUCACIÓN}
+
+\vspace{0.3em}
+\begin{rSubsection}{EDHEC Business School}{Agosto 2022 - Presente}{Programa Grande École}{Niza, Francia}
+    Doble titulación de Máster en Gestión (MiM) en Finanzas / MSc en Ingeniería Financiera.
+    \item \textit{Cursos relevantes: Econometría Financiera con R, Aprendizaje Automático Financiero a través de la Clasificación}
+\end{rSubsection}
+
+\begin{rSubsection}{Universidad de los Andes}{Agosto 2015 - Noviembre 2021}{Licenciatura en Economía, Licenciatura en Administración de Empresas}{Bogotá, Colombia}
+    \item \textit{Cursos relevantes: Gestión de Activos, Mercados de Capitales, Inteligencia Artificial y Big Data para Economía}
+\end{rSubsection}
+
+\end{rSection}
+
+\vspace{0.5em}
+
+
+%
+%   SECCIÓN DE EXPERIENCIA ADICIONAL Y LOGROS
+%
+
+\begin{rSection}{EXPERIENCIA ADICIONAL Y LOGROS}
+
+\vspace{0.3em}
+\begin{rSubsection}{Finance and Investment Club Uniandes (FIC)}{Marzo 2020 – Noviembre 2021}{Asociación de estudiantes de finanzas de la Universidad de los Andes}{Bogotá, Colombia}
+    \item Creé y gestioné un podcast internacional de Fintech llamado "Fintech: Byte-Sized" con 12 episodios y más de 1800 reproducciones, investigando, desarrollando temas y realizando entrevistas.
+\end{rSubsection}
+
+\begin{rSubsection}{Distinción Andrés Bello}{Diciembre 2014}{Mejores resultados en las pruebas de admisión universitaria del país}{Bogotá, Colombia}
+    \item Sexto mejor puntaje a nivel nacional y segundo mejor en Bogotá.
+\end{rSubsection}
+
+\end{rSection}
+
+\vspace{0.5em}
+
+%
+%   SECCIÓN DE HABILIDADES TÉCNICAS
+%
+
+\begin{rSection}{HABILIDADES TÉCNICAS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Lenguajes de programación & Python, R, VBA, Matlab, \LaTeX \\
+Software y herramientas & MS Excel, MS PowerPoint, Power BI \\
+Bases de datos financieras & Bloomberg, Refinitiv, S\&P Capital IQ Pro, FactSet \\
+\end{tabular}
+
+\end{rSection}
+
+\vspace{0.5em}
+
+%
+%   SECCIÓN DE IDIOMAS
+%
+
+\begin{rSection}{IDIOMAS}
+
+{\bf Español} \ \ {Nativo - C2} \hfill {\bf Inglés} \ \ {Fluido - C2} \hfill {\bf Francés} \ \ {Fluido - C1} \hfill {\bf Alemán} \ \ {Avanzado - B2}
+
+\end{rSection}
+
+\vspace{0.5em}
+
+%
+%   SECCIÓN DE PASATIEMPOS E INTERESES
+%
+
+\begin{rSection}{PASATIEMPOS E INTERESES}
+
+{\bf Natación} \ \ \ \ \ {\bf Tenis} \ \ \ \ \ {\bf Golf} \ \ \ \ \ {\bf Cine y cinematografía}  \ \ \ \ \ {\bf Edición de música} 
+
+\end{rSection}
+
+
+\end{document}
