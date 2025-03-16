@@ -121,6 +121,8 @@
     \\
     {\em #3} \hfill {\em #4} % Italic job title and location
   }
+  % Adding a small space between the company name and job details
+  \vspace{0.5em}
   \begin{list}{$\cdot$}{\leftmargin=1em} % \cdot used for bullets, no indentation
     \itemsep -0.70em \vspace{-0.70em} % Compress items in list together for aesthetics
   }{
