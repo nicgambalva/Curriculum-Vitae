@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CV Profesional de Longitud Media
+% Plantilla LaTeX
+% Versión 2.0 (8/5/13)
+%
+% Esta plantilla ha sido descargada de:
+% http://www.LaTeXTemplates.com
+%
+% Autor original:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Nota importante:
+% Esta plantilla requiere que el archivo resume.cls esté en el mismo directorio que
+% el archivo .tex. El archivo resume.cls proporciona el estilo de currículum utilizado para estructurar el
+% documento.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume} % Utiliza el estilo personalizado resume.cls
+
+\usepackage[left=0.5in,top=0.2in,right=0.5in,bottom=0.5in]{geometry} % Márgenes del documento
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{fontawesome}
+\usepackage{relsize}
+
+\sloppy
+
+\newcommand{\tab}[1]{\hspace{.1\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+\name{Nicolás Gamboa Álvarez} % Tu nombre
+\title{Msc in Financial Engineering} % Tu título
+
+%
+%   INFORMACIÓN DE CONTACTO
+%
+
+\address{\faPhoneSquare \ +33 06 14 42 18 03} % Número de teléfono
+\address{París, Francia} % Dirección (no completa)
+\address{\href{mailto:nicolas.gamboaalvarez@edhec.com}{\faEnvelopeSquare \ nicolas.gamboaalvarez@edhec.com} \\ \href{https://www.linkedin.com/in/nicolasgamboaalvarez} {\faLinkedinSquare \ LinkedIn: nicolasgamboaalvarez} \\ \href{https://github.com/nicgambalva}{\faGithubSquare \ GitHub: nicgambalva}} % Correo, LinkedIn y GitHub
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}
+
+%
+%   SECCIÓN DE EDUCACIÓN
+%
+
+\begin{rSection}{EDUCACIÓN}
+
+\begin{rSubsection}{EDHEC Business School}{Agosto 2022 - Julio 2025}{Programme Grande École - Msc in Financial Engineering / Master in Management in Finance}{Niza, Francia}
+    \item Recientemente clasificado como el 4º mejor MiM y 6º mejor Master in Finance del mundo según el Financial Times.
+    \item \textit{Cursos relevantes: Financial Econometrics with R, Financial Machine Learning, Volatility Based Portfolio Construction Strategies (Master Project), Quantitative Portfolio Management, Advanced Derivatives, Equity Derivatives}
+\end{rSubsection}
+
+\begin{rSubsection}{Universidad de los Andes}{Agosto 2015 - Noviembre 2021}{Pregrado en Economía}{Bogotá, Colombia}
+    \item Reconocido como el mejor programa de Economía en Colombia y el 4º mejor en América Latina según QS Rankings.
+    \item \textit{Cursos relevantes: Asset Management, Capital Markets, AI and Big Data for Economics}
+\end{rSubsection}
+
+\end{rSection}
+
+\vspace{0.5em}
+
+%
+%   SECCIÓN DE EXPERIENCIA LABORAL
+%
+
+\begin{rSection}{EXPERIENCIA LABORAL}
+
+    \begin{rSubsection}{CANDRIAM}{Agosto 2024 - Enero 2026}{Assistant Client Portfolio Manager for Liquid Alternative Funds - Prácticas}{París, Francia}
+        \item Como product specialist para estrategias de hedge funds incluyendo absolute return equity market neutral, merger arbitrage, CTA y multi-asset premia. Interfaz diaria con Portfolio Managers y atención a consultas de clientes.
+        \item Preparación de fund comments, informes de rendimiento y presentaciones estratégicas. Automatización de flujos de trabajo de reporting utilizando Python, Bloomberg, VBA y Azure.
+    \end{rSubsection}
+
+    \begin{rSubsection}{TP ICAP}{Enero 2024 - Julio 2024}{Quantitative Analyst / Big Data Equity Research - Prácticas}{París, Francia}
+        \item Investigación cuantitativa sobre 243 acciones cotizadas en 18 bolsas y 7 índices MSCI, utilizando soluciones big data para identificar oportunidades de inversión, especialmente pronóstico de sorpresas de earnings.
+        \item Desarrollo e implementación de modelos cuantitativos utilizando grandes bases de datos para rastrear y predecir resultados de empresas cotizadas y el rendimiento de índices de acciones, usando Python y R.
+        \item Redacción de informes de investigación y análisis de mercado sobre empresas bajo cobertura, y evaluación del rendimiento de recomendaciones de equity research tras publicaciones de resultados.
+    \end{rSubsection}
+
+    \begin{rSubsection}{PKF Arsilon}{Junio 2023 - Diciembre 2023}{Financial Modelling and Valuation Consultant - Prácticas}{París, Francia}
+        \item Construcción de modelos de valoración Excel, CapitalIQ Pro y VBA para acciones, bonos, management packages y otros instrumentos financieros.
+        \item Implementación de métodos de valoración como árboles binomiales, simulaciones Monte Carlo, DCF y comparables.
+        \item Análisis de datos financieros y planes de negocio para valorar más de 10 empresas y diferentes tipos de activos financieros. Aplicación de técnicas de valoración relevantes y realización de estudios de mercado.
+    \end{rSubsection}
+
+    \begin{rSubsection}{EY - Technology Consulting}{Julio 2021 - Agosto 2022}{Data \& Analytics Consultant - Prácticas}{Bogotá, Colombia}
+        \item Implementación de algoritmos para análisis de datos en Python y R para diferentes clientes, incluyendo simulación de escenarios de rendimiento y riesgo utilizando modelos estadísticos y técnicas de visualización.
+        \item Creación de informes y dashboards basados en datos como entregables, lo que implicó compilación, preparación y análisis de diferentes fuentes de datos en Power BI. Soporte en el diseño de bases de datos y modelaje matemático.
+        \item Construcción y diseño de modelos de datos y arquitecturas de datos para clientes en diferentes industrias.
+    \end{rSubsection}
+\end{rSection}
+
+\vspace{0.5em}
+
+%
+%   SECCIÓN DE EXPERIENCIA ADICIONAL Y LOGROS
+%
+
+%\begin{rSection}{EXPERIENCIA ADICIONAL Y LOGROS}
+
+%\begin{rSubsection}{Finance and Investment Club Uniandes (FIC)}{Marzo 2020 – Noviembre 2021}{Asociación de estudiantes de finanzas de la Universidad de los Andes}{Bogotá, Colombia}
+%    \item Creé y gestioné un podcast internacional de Fintech llamado "Fintech: Byte-Sized", con 12 episodios y más de 1800 reproducciones, investigando, desarrollando temas y realizando entrevistas.
+%\end{rSubsection}
+
+%\begin{rSubsection}{Distinción Andrés Bello}{Diciembre 2014}{Mejores resultados en las pruebas de admisión universitaria del país}{Bogotá, Colombia}
+%    \item Sexto mejor puntaje a nivel nacional y segundo mejor en Bogotá.
+%\end{rSubsection}
+
+%\end{rSection}
+
+%
+%   SECCIÓN DE HABILIDADES TÉCNICAS
+%
+
+\begin{rSection}{HABILIDADES TÉCNICAS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Lenguajes de programación &  Python, R, SQL, VBA, \LaTeX\\
+Software y herramientas & MS Excel, MS PowerPoint, Power BI \\
+Bases de datos financieras & Bloomberg, S\&P Capital IQ Pro, FactSet \\
+\end{tabular}
+
+\end{rSection}
+
+%
+%   SECCIÓN DE IDIOMAS
+%
+
+\begin{rSection}{IDIOMAS}
+
+{\bf Francés:} \ \ {Fluido - C2} \hfill {\bf Inglés:} \ \ {Fluido - C2} \hfill {\bf Español:} \ \ {Nativo - C2} \hfill {\bf Alemán:} \ \ {Avanzado - B2}
+
+\end{rSection}
+
+%
+%   SECCIÓN DE PASATIEMPOS E INTERESES
+%
+
+
+
+
+\begin{rSection}{PASATIEMPOS E INTERESES}
+
+    {\bf Natación} \ \ \ \ \ {\bf Golf} \ \ \ \ \ {\bf Cine} \ \ \ \ \ {\bf Café de especialidad}
+    
+\end{rSection}
+
+
+\end{document}

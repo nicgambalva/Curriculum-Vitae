@@ -36,6 +36,9 @@
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
 
+\def \title#1{\def\@title{#1}} % Defines the \title command to set title
+\def \@title {} % Sets \@title to empty by default
+
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
 % One, two or three address lines can be specified 
@@ -74,6 +77,15 @@
   \endgroup
 }
 
+% \printtitle is used to print the title as a subtitle
+\def \printtitle {
+  \begingroup
+    \centerline{\large \textsc{\@title}}
+  \endgroup
+  \par
+  \smallskip
+}
+
 %----------------------------------------------------------------------------------------
 %   PRINT THE HEADING LINES
 %----------------------------------------------------------------------------------------
@@ -82,6 +94,9 @@
 \renewcommand{\document}{
   \ori@document  % Begin document
   \printname % Print the name specified with \name
+  \@ifundefined{@title}{}{ % Print the title if specified
+    \printtitle
+  }
   \@ifundefined{@addressone}{}{ % Print the first address if specified
     \printaddress{\@addressone}
   }
