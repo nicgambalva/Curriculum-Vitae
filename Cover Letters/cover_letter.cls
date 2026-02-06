@@ -22,7 +22,14 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{fontawesome}
 \usepackage{relsize}
-\usepackage[left=1.2in, right=1.2in, top=1in, bottom=1in]{geometry} % Set margins to standard US letter
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry} % Set margins to standard US letter
+% Hyphenation and line breaking control
+\tolerance=9999
+\emergencystretch=10pt
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\sloppy
+
 
 \pagestyle{empty} % Suppress page numbers
 

@@ -1,0 +1,17 @@
+Work Responsibilities Summary
+
+Candriam, Assistant Client Portfolio Manager (August 2024 - January 2026)
+Supported liquid alternative funds covering equity market neutral, merger arbitrage, diversified futures (CTA), and multi-strategy. Monitored fund performance versus peers using Bloomberg and Python, prepared performance reports and client commentary, and streamlined recurring analysis through automation. Worked closely with fund managers to explain strategy positioning and risk drivers to institutional clients. Responsibilities focused on communication, reporting, and analysis of each fund.
+
+TP ICAP, Quantitative Analyst / Big Data Equity Research (January 2024 - July 2024)
+Built and maintained data-driven indicators to anticipate earnings results across 243 equities and 18 exchanges. Sourced and cleaned new datasets, tested our research against consensus expectations, and measured effectiveness after each earnings release. Expanded coverage to the aerospace sector, combining technical data work with fundamental company understanding. The role required rapid iteration and clear delivery of actionable insights under time pressure.
+
+PKF Arsilon, Financial Modelling and Valuation Consultant (June 2023 - December 2023)
+Valued non-listed equity, debt instruments, lease agreements, and management packages for a range of clients. Applied standard valuation techniques, built supporting models in Excel, and documented assumptions and outputs for review. The work emphasized analytical discipline, consistency in methods, and clear presentation of results.
+
+EY, Data and Analytics Consultant (July 2021 - August 2022)
+Contributed to projects involving data modeling, architecture, governance, and risk prediction analytics. Organized large datasets into structured models, validated data quality, and translated analytical outputs into concise insights for stakeholders. The role strengthened the ability to communicate technical work to non-technical audiences and to align data work with business goals.
+
+Links
+LinkedIn: https://www.linkedin.com/in/nicolasgamboaalvarez/
+GitHub: https://github.com/nicgambalva
