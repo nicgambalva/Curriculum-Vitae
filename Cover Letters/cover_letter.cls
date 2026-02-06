@@ -1,14 +1,5 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CL - COVER LETTER CLASS FILE
-%
-% This template has been made by Nicolás Gamboa Álvarez
-%
-% This class file defines the structure and design of the template. 
-%
-% Original header:
-% Copyright (C) 2024 by Nicolás Gamboa Álvarez
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This file is the cover letter class used to format cover letters.
+% Nicolas Gamboa Alvarez, 2026
 
 \ProvidesClass{coverLetter}[2023/10/05 Simple cover letter class]
 
@@ -18,6 +9,7 @@
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{hyperref} % Required for creating hyperlinks
+\usepackage[english,french]{babel}
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{fontawesome}
@@ -37,28 +29,74 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
 %----------------------------------------------------------------------------------------
+%   LANGUAGE AND HREF SETTINGS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\cllanguage}[1]{\def\@cllanguage{#1}} % EN or FR
+\newcommand{\@cllanguage}{EN}
+
+\newcommand{\clhref}[1]{\def\@clhref{#1}} % true or false
+\newcommand{\@clhref}{true}
+
+\newcommand{\cl@recruiterdefault}{%
+  \ifthenelse{\equal{\@cllanguage}{FR}}{Responsable du recrutement}{Hiring Manager}%
+}
+
+\newcommand{\cl@concerning}{%
+  \ifthenelse{\equal{\@cllanguage}{FR}}{Concernant le poste de}{Concerning the role of}%
+}
+
+\newcommand{\cl@greeting}{%
+  \ifthenelse{\equal{\@cllanguage}{FR}}{Madame, Monsieur,}{Dear \cl@recruitername,}%
+}
+
+\newcommand{\cl@closingdefault}{%
+  \ifthenelse{\equal{\@cllanguage}{FR}}{Bien à vous,}{Kind regards,}%
+}
+
+\newcommand{\cl@recruitername}{%
+  \ifthenelse{\equal{\@recruiter}{}}{\cl@recruiterdefault}{\@recruiter}%
+}
+
+\newcommand{\cl@today}{%
+  \ifthenelse{\equal{\@cllanguage}{FR}}{\begingroup\selectlanguage{french}\today\endgroup}{\begingroup\selectlanguage{english}\today\endgroup}%
+}
+
+\newcommand{\cl@mailto}[1]{%
+  \ifthenelse{\equal{\@clhref}{true}}{\href{mailto:#1}{\faEnvelopeSquare \ #1}}{\faEnvelopeSquare \ #1}%
+}
+
+\newcommand{\cl@linkedinlink}[1]{%
+  \ifthenelse{\equal{\@clhref}{true}}{\href{https://www.linkedin.com/in/#1}{\faLinkedinSquare \ LinkedIn: #1}}{\faLinkedinSquare \ LinkedIn: #1}%
+}
+
+%----------------------------------------------------------------------------------------
 %   HEADINGS COMMANDS: Commands for printing name, and contact information
 %----------------------------------------------------------------------------------------
 
 \newcommand{\bigname}[1]{\def\@bigname{#1}} % Defines the \name command to set name
 \newcommand{\@name}{} % Sets \@name to empty by default
 
+\newcommand{\cltitle}[1]{\def\@cltitle{#1}} % Defines the \cltitle command to set title
+\newcommand{\@cltitle}{} % Sets \@cltitle to empty by default
+
 \newcommand{\phone}[1]{\def\@phone{\faPhoneSquare \ #1}} % Defines the \phone command to set phone number
 \newcommand{\@phone}{} % Sets \@phone to empty by default
 
-\newcommand{\email}[1]{\def\@email{\href{mailto:#1}{\faEnvelopeSquare \ #1}}} % Defines the \email command to set email with mailto link
+\newcommand{\email}[1]{\def\@email{\cl@mailto{#1}}} % Defines the \email command to set email
 \newcommand{\@email}{} % Sets \@email to empty by default
 
 \newcommand{\city}[1]{\def\@city{#1}} % Defines the \city command to set city
 \newcommand{\@city}{} % Sets \@city to empty by default
 
-\newcommand{\linkedin}[1]{\def\@linkedin{\href{https://www.linkedin.com/in/#1}{\faLinkedinSquare \ LinkedIn: #1}}} % Defines the \linkedin command to set linkedin
+\newcommand{\linkedin}[1]{\def\@linkedin{\cl@linkedinlink{#1}}} % Defines the \linkedin command to set linkedin
 \newcommand{\@linkedin}{} % Sets \@linkedin to empty by default
 
 % \printname is used to print the name as a page header
 \newcommand{\printname}{
   \begingroup
   {\large\bfseries\@bigname} \\ [0.3 \baselineskip]
+  \ifthenelse{\equal{\@cltitle}{}}{}{\normalsize\textsc{\@cltitle} \\ [0.2 \baselineskip]}
   \@email \\
   \@linkedin \\
   \@phone \\
@@ -73,11 +111,11 @@
 \newcommand{\cldate}[1]{\def\@cldate{#1}} % Defines the \cldate command to set date
 \ifdefined\@cldate % Setting the date to the current date by default
 \else
-  \newcommand{\@cldate}{\today}
+  \newcommand{\@cldate}{\cl@today}
 \fi
 
 \newcommand{\recruiter}[1]{\def\@recruiter{#1}} % Defines the \recruiter command to set recruiter
-\newcommand{\@recruiter}{Hiring Manager} % Sets \@recruiter to "Hiring Manager" by default
+\newcommand{\@recruiter}{} % Sets \@recruiter to empty by default
 
 \newcommand{\company}[1]{\def\@company{#1}} % Defines the \company command to set company
 \newcommand{\@company}{} % Sets \@company to empty by default
@@ -88,9 +126,9 @@
 \newcommand{\printdestinataire}{
   \begingroup
   \@cldate \\ \\
-  \textbf{\@recruiter} \\
+  \textbf{\cl@recruitername} \\
   \@company \\
-  Concerning the role of \@jobtitle
+  \cl@concerning \ \@jobtitle
   \endgroup \\
 }
 
@@ -106,7 +144,7 @@
 
 \newcommand{\printclosing}{
   \begingroup
-    \@closing \\ \\
+    \ifthenelse{\equal{\@closing}{}}{\cl@closingdefault}{\@closing} \\ \\
     \@smallname
   \endgroup
 }
@@ -120,7 +158,7 @@
 
 \newcommand{\printclbody}{
   \begingroup
-    Dear \@recruiter, \\ \\
+    \cl@greeting \\ \\
     \@clbody
   \endgroup \\ [3 \baselineskip]
 }
